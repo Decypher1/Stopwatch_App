@@ -1,0 +1,99 @@
+/* ---------- Global / Reset ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; }
+
+/* Entire page background red, and all text white */
+body {
+  background: #c82323; /* red background (adjust shade if needed) */
+  color: #ffffff;      /* all fonts white as asked */
+  font-family: 'Orbitron', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Header: top-right About */
+.site-header {
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  z-index: 10;
+}
+.about-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+}
+
+/* Main centered content */
+.main {
+  min-height: 100vh;
+  /* keep header/footer visible while center aligning */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+/* CLEAR text (clickable like Behance mock) */
+.clear {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Timer display */
+.display {
+  font-size: 4rem;         /* big digital timer */
+  font-weight: 700;
+  letter-spacing: 6px;
+  margin-top: 6px;
+}
+
+/* Oval yellow start/stop button (border-box like) */
+.oval-btn {
+  margin-top: 18px;
+  padding: 14px 56px;      /* wide to create oval */
+  border-radius: 999px;    /* fully rounded */
+  border: 2px solid rgba(0,0,0,0.12); /* subtle border */
+  background: #ffd400;     /* yellow background */
+  color: #ffffff;          /* text white */
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* Hover / active */
+.oval-btn:hover { transform: translateY(-3px); }
+.oval-btn:active { transform: translateY(0) scale(0.99); }
+
+/* Footer at bottom center */
+.site-footer {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ffffff;
+  font-size: 0.9rem;
+  opacity: 0.95;
+}
+
+/* Focus states for accessibility */
+.clear:focus, .oval-btn:focus, .about-link:focus {
+  outline: 3px solid rgba(255,255,255,0.12);
+  outline-offset: 4px;
+}
+
+/* Small screen responsiveness */
+@media (max-width: 420px) {
+  .display { font-size: 3rem; letter-spacing: 4px; }
+  .oval-btn { padding: 12px 40px; font-size: 0.95rem; }
+}

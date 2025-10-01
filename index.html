@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Stopwatch — Styled</title>
+
+  <!-- Digital font (optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="about-link" href="#" aria-label="About">About</a>
+  </header>
+
+  <main class="main">
+    <!-- CLEAR acts as reset (clickable) -->
+    <div id="clear" class="clear" role="button" tabindex="0" aria-label="Clear timer">CLEAR</div>
+
+    <!-- Timer display -->
+    <div id="display" class="display" aria-live="polite">00:00:00</div>
+
+    <!-- Single oval start/stop button -->
+    <button id="toggle" class="oval-btn" aria-pressed="false">start/stop</button>
+  </main>
+
+  <footer class="site-footer">© 2021 Dania Al-Hakim</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
