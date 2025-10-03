@@ -6,7 +6,7 @@ html,body { height: 100%; }
 body {
   background: #c82323; /* red background (adjust shade if needed) */
   color: #ffffff;      /* all fonts white as asked */
-  font-family: 'Orbitron', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -58,17 +58,17 @@ body {
 /* Oval yellow start/stop button (border-box like) */
 .oval-btn {
   margin-top: 18px;
-  padding: 14px 56px;      /* wide to create oval */
+  padding: 50px 56px;      /* wide to create oval */
   border-radius: 999px;    /* fully rounded */
   border: 2px solid rgba(0,0,0,0.12); /* subtle border */
-  background: #ffd400;     /* yellow background */
-  color: #ffffff;          /* text white */
+  background: #ffe66c;     
+  color: #ffffff;          
   font-weight: 700;
   font-size: 1rem;
   cursor: pointer;
   outline: none;
   transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  box-shadow: 30px 20px 10px rgba(0,0,0,0.25);
 }
 
 /* Hover / active */
